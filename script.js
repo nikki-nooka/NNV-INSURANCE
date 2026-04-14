@@ -2511,7 +2511,7 @@ const renderServiceDetail = (lang, serviceIndex) => {
 	}
 
 	if (serviceDetailTitle) {
-		serviceDetailTitle.textContent = `${emoji} ${card[0]}`.trim();
+		serviceDetailTitle.textContent = card[0];
 	}
 	if (serviceDetailSummary) {
 		serviceDetailSummary.textContent = detail.summary || card[1];
@@ -2561,7 +2561,7 @@ const renderBenefitDetail = (lang, benefitIndex) => {
 	}
 
 	if (benefitDetailTitle) {
-		benefitDetailTitle.textContent = `${emoji} ${card[0]}`.trim();
+		benefitDetailTitle.textContent = card[0];
 	}
 	if (benefitDetailSummary) {
 		benefitDetailSummary.textContent = detail.summary || card[1];
@@ -2611,7 +2611,7 @@ const renderChooseDetail = (lang, chooseIndex) => {
 	}
 
 	if (chooseDetailTitle) {
-		chooseDetailTitle.textContent = `${emoji} ${card[0]}`.trim();
+		chooseDetailTitle.textContent = card[0];
 	}
 	if (chooseDetailSummary) {
 		chooseDetailSummary.textContent = detail.summary || card[1];
@@ -2718,8 +2718,7 @@ const applyLanguage = (lang) => {
 	const serviceTexts = document.querySelectorAll("#services .info-card p");
 	serviceTitles.forEach((item, index) => {
 		if (t.serviceCards[index]) {
-			const emoji = t.serviceEmojis[index] || "";
-			item.textContent = `${emoji} ${t.serviceCards[index][0]}`.trim();
+			item.textContent = t.serviceCards[index][0];
 		}
 	});
 	serviceTexts.forEach((item, index) => {
@@ -2883,8 +2882,7 @@ const applyLanguage = (lang) => {
 	const benefitTexts = document.querySelectorAll("#benefits .benefit-card p");
 	benefitTitles.forEach((item, index) => {
 		if (t.benefitCards[index]) {
-			const emoji = t.benefitEmojis[index] || "";
-			item.textContent = `${emoji} ${t.benefitCards[index][0]}`.trim();
+			item.textContent = t.benefitCards[index][0];
 		}
 	});
 	benefitTexts.forEach((item, index) => {
@@ -2905,8 +2903,7 @@ const applyLanguage = (lang) => {
 	const chooseTexts = document.querySelectorAll(".choose-section .feature-card p");
 	chooseTitles.forEach((item, index) => {
 		if (t.chooseCards[index]) {
-			const emoji = t.chooseEmojis[index] || "";
-			item.textContent = `${emoji} ${t.chooseCards[index][0]}`.trim();
+			item.textContent = t.chooseCards[index][0];
 		}
 	});
 	chooseTexts.forEach((item, index) => {
